@@ -2,6 +2,8 @@ version: "3.2"
 services:
   web:
     image: nginx:alpine
+    ports:
+     - 80:80
     volumes:
       - type: volume
         source: mydata
@@ -13,13 +15,6 @@ services:
         target: /opt/app/static
      ports:
       - 80:80
-
-  db:
-    image: postgres:latest
-    volumes:
-      - "/var/run/postgres/postgres.sock:/var/run/postgres/postgres.sock"
-      - "dbdata:/var/lib/postgresql/data"
-
 volumes:
   mydata:
-  dbdata:
+  
