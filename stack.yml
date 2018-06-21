@@ -13,8 +13,7 @@ services:
       - type: bind
         source: ./static
         target: /opt/app/static
-     ports:
-      - 80:80
 volumes:
-  mydata:
-  
+   mydata:
+      external:
+          name: mydata
