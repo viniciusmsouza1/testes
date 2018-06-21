@@ -5,14 +5,7 @@ services:
     ports:
      - 80:80
     volumes:
-      - type: volume
-        source: mydata
-        target: /data
-        volume:
-          nocopy: true
-      - type: bind
-        source: ./static
-        target: /opt/app/static
+     - mydata:/var/lib/nginx/data
 volumes:
    mydata:
       external:
