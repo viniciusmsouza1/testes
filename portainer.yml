@@ -1,4 +1,4 @@
-version: '2'
+version: '3.2'
 
 services:
   portainer:
@@ -7,7 +7,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
-
 volumes:
   portainer_data:
 networks:
