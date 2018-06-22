@@ -10,3 +10,7 @@ services:
 
 volumes:
   portainer_data:
+networks:
+   default:
+       external:
+             name: agent_portainer_agent
